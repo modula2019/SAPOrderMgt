@@ -1,9 +1,13 @@
 # init.sh
 
+clear
+
 docker-compose stop
 
 docker-compose build
 
 docker-compose up -d
 
-docker-compose start
+cd ./ordermgt-api && npm install && node server.js
+
+# docker-compose start
